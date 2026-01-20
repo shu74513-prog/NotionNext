@@ -1,1 +1,57 @@
+/* 翻译悬停提示样式 */
+.translation-tooltip {
+  position: relative;
+  display: inline;
+  color: #3b82f6; /* 蓝色 */
+  border-bottom: 2px dotted #3b82f6;
+  cursor: help;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
 
+.translation-tooltip:hover {
+  color: #2563eb;
+}
+
+/* 翻译提示框 */
+.translation-tooltip::after {
+  content: attr(data-translation);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  background: #1f2937;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: normal;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+/* 小箭头 */
+.translation-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #1f2937;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1001;
+}
+
+.translation-tooltip:hover::after,
+.translation-tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
