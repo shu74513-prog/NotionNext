@@ -80,6 +80,6 @@ const BLOG = {
   CUSTOM_EXTERNAL_JS: [
     '/js/vocab-card-complete.js'
   ],
-  
+
   // ... 其他配置 ...
 }
