@@ -68,18 +68,11 @@ const BLOG = {
     'Hi，我是一个程序员, Hi，我是一个打工人,Hi，我是一个干饭人,欢迎来到我的博客🎉',
 
   // uuid重定向至 slug
-  UUID_REDIRECT: process.env.UUID_REDIRECT || false
+  UUID_REDIRECT: process.env.UUID_REDIRECT || false,
+  
+  CUSTOM_EXTERNAL_JS: [
+    '/js/vocab-card-complete.js'
+  ]
 }
 
 module.exports = BLOG
-// 在 blog.config.js 中找到这个位置或添加
-const BLOG = {
-  // ... 其他配置 ...
-  
-  // 自定义外部脚本
-  CUSTOM_EXTERNAL_JS: [
-    '/js/vocab-card-complete.js'
-  ],
-
-  // ... 其他配置 ...
-}
