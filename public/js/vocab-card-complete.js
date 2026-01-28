@@ -116,7 +116,7 @@
                 transition: all 0.3s ease;
                 z-index: 1000;
             }
-            
+
             .hover-word:hover::before,
             .hover-word:hover::after {
                 opacity: 1;
