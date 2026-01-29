@@ -70,7 +70,7 @@ const BLOG = {
   UUID_REDIRECT: process.env.UUID_REDIRECT || false,
   
   CUSTOM_EXTERNAL_JS: [
-    '/js/vocab-card-complete.js'
+    '/js/vocab-card-enhanced.js'
   ]
 }
 
